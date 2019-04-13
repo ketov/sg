@@ -1,0 +1,118 @@
+body{
+    background: $white;
+    color: $dark;
+    font-family: $GPR, sans-serif;
+    font-size: 120%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+p::selection,
+a::selection,
+span::selection,
+h1::selection,
+h2::selection
+{
+    background: #ffc107;
+}
+
+p::-moz-selection,
+a::-moz-selection,
+span::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection
+{
+    background: #ffc107;
+}
+
+.wrapper{
+    margin: 0 auto;
+    min-width: 940px;
+    padding: 0;
+    width: 940px;
+}
+
+.clear{
+    clear: both;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+[data-animation] {
+    opacity: 0;
+}
+
+[data-animation].animated {
+    opacity: 1;
+}
+
+h2{
+    font-family: $GPM;
+    font-size: 270%;
+    font-weight: normal;
+    line-height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+}
+
+a{
+    color: $black;
+    text-decoration: none;
+    //border-bottom: 1px solid $green;
+    //background-image: linear-gradient($green 0, $green 100%);
+    background-size: 0 0;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    &:hover{
+        background-size: 1px 100%;
+    }
+}
+
+button{
+    border-radius: 40px;
+    color: $dark;
+    cursor: pointer;
+    font-family: $GPM;
+    font-size: 85%;
+    text-transform: uppercase;
+    outline: none;
+    padding: 13px 66px 14px;    
+    transition: .2s ease;
+    letter-spacing: 1.5px;
+}
+
+@font-face{
+    font-family: GothamProRegular;
+    src: url('../fonts/GothamProRegular.ttf');
+}
+
+@font-face{
+    font-family: GothamProMedium;
+    src: url('../fonts/GothamProMedium.ttf');
+}
+
+@media(max-width: 1600px){
+    body{
+        font-size: 110%;
+    }
+}
+
+@media(max-width: 1350px){
+    body{
+        font-size: 100%;
+    }
+}
+
+@media(max-width: 767px){
+    body{
+        background: $light-gray;
+    }
+}
